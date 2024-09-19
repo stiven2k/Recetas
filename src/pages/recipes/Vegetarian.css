@@ -32,13 +32,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    
 }
 
 
 .card .botones .boton:hover {
     background-color: black;
-    transition: ease-in-out all 2s;
+    transition: ease-in-out all 0.5s;
 
 }
 
@@ -49,13 +49,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 10px;
-    transition: ease-in-out all 2s;
+    width: 0;
+    transition: ease-in-out all 0.5s;
 }
 
 .card .botones .boton:hover::after {
     width: 40%;
-    transition: ease-in-out all 2s;
+    transition: ease-in-out all 0.5s;
 
 }
 
