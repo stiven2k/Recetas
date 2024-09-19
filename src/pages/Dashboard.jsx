@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom"
+import './Dashboard.css'
 
 const Dashboard = () => {
   return (
@@ -8,6 +9,7 @@ const Dashboard = () => {
             <Link to='non-vegetarian'>Non Vegetarian</Link>
         </aside>
         <section>
+          <span className="glass"></span>
             <h2>Info de recetas</h2>
             <Outlet />
         </section>
