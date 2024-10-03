@@ -10,19 +10,27 @@ const Login = () => {
   console.log(users)
   let direccion = useNavigate()
   function IniciarSesion() {
-    if (users[0].user == stateUser) {
+    if (buscarUsuario) {
       //  setTimeout(() => {
       direccion('/dashboard')
       // }, 2000)
     } else {
       console.log('Credenciales Incorrectas')
     }
+  }
+
+  function buscarUsuario() {
+    let auth = users.some((item) => stateUser == item.user)
+    console.log(auth)
+    return auth
 
   }
+
+
   return (
     <form className="loginForm" action="">
-      <input placeholder="User" />
-      <input placeholder="Password" />
+      <input onChange={(event) => { setStateUser(event.target.value) }} placeholder="User" />
+      <input ononChange={(event) => { setStatePassword(event.target.value) }} placeholder="Password" />
       <input onClick={IniciarSesion} type="button" value="Login" />
       <Link to='/register'>¿No tiene una cuenta?</Link>
     </form>
